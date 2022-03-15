@@ -1,7 +1,7 @@
 ﻿section HelloWorld;
 
 [DataSource.Kind="HelloWorld", Publish="HelloWorld.Publish"]
-shared HelloWorld.Contents = (optional message as text) =>
+shared HelloWorld.Contents = (logicalParameter as logical, optional message as text) =>
     let
         message = if (message <> null) then message else "Hello world"
     in
